@@ -1,0 +1,11 @@
+Workshop com o foco em dos controladores de versão mais utilizados na atualizada, o GIT. Neste evento serão apresentadas técnicas do básico ao avançado de como utilizar ao máximo as funcionalidades do GIT juntamente com o Github. As ferramentas de controle de versão podem ser utilizadas não só para guardar código fonte, mas também documentos, trabalhos apresentações e no caso do github até para armazenamento e apresentação de conteúdo web estático. O foco do evento é estudantes, profissionais de TI ou não. 
+
+
+WORKSHOP GIT
+SE TORNE UM HARD USER EM GIT E GITHUB. TÉCNICAS E DICAS PARA APROVEITAR AO MÁXIMO ESTES RECURSOS.
+
+DATA: 19/03/2016
+
+LOCAL: UFU CAMPUS SANTA MÔNICA - ANFITEATRO BLOCO 5S
+
+http://uaijug.github.io/planejamento-eventos-2016/sites/site-default-sample/index.html?nome-evento=wmf
