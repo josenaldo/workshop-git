@@ -1,4 +1,6 @@
-Esse workshop tem como objetivo te transformar num estagiário trainee aprendiz noviço iniciante em git. Sério. Você vai sair de noob que não sabe de nada para o priemiro estágio da ninjíce guítica.
+Apresentação disponível em http://josenaldo.github.io/workshop-git/#/
+
+Esse workshop tem como objetivo te transformar num estagiário trainee aprendiz noviço iniciante em git. Sério. Você vai sair de noob que não sabe de nada para o primeiro estágio da ninjíce guítica.
 
 Aqui você encontrará os tomos do segredo nínjico do git:
 
