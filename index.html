@@ -704,13 +704,352 @@ origin    git@github.com:mojombo/grit.git
                     <h2 class="color5-darker">SIM! Com o git, podemos ter vários remotos!</h2>
                 </section>
 
+                <section>
+                    <h2 class="color5-darker">Adicionando repositórios remotos</h2>
+                    <pre><code data-trim data-noescape>
+$ git remote
+origin
+$ git remote add pb git://github.com/paulboone/ticgit.git
+$ git remote -v
+origin    git://github.com/schacon/ticgit.git
+pb    git://github.com/paulboone/ticgit.git
+                    </code></pre>
+                </section>
 
+                <section>
+                    <h2 class="color5-darker">Adicionando repositórios remotos</h2>
+                    <h3>Windows</h3>
+                    <img src="images/remotos-windows.png" class="clean-img img-responsive"/>
+                </section>
 
-                                <section>
-                                    <h2 class="color1-darker"> enviar e obter arquivos a partir de repositórios remotos</h2>
-                                </section>
+                <section>
+                    <h2 class="color1-darker">Fazendo o Fetch e Pull de Seus Remotos</h2>
 
+                    <pre><code data-trim data-noescape>
+$ git fetch [nome-remoto]
+                    </code></pre>
+                    <p>
+                        Comando que vai até o projeto remoto e pega todos os dados que você ainda não tem.Ele não faz o
+                        merge automaticamente com o seus dados ou modifica o que você está trabalhando atualmente.
+                    </p>
 
+                    <pre><code data-trim data-noescape>
+$ git pull
+                    </code></pre>
+                    <p>
+                        Faz um fetch e, depois, faz um merge de um branch remoto no seu branch atual.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="color1-darker">Pushing Para Seus Remotos</h2>
+
+                    <pre><code data-trim data-noescape>
+$ git push [nome-remoto] [branch]
+                    </code></pre>
+                    <p>
+                        Envia o trabalho para o servidor
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Inspecionando um Remoto</h2>
+                    <pre><code data-trim data-noescape>
+$ git remote show origin
+* remote origin
+  URL: git://github.com/schacon/ticgit.git
+  Remote branch merged with 'git pull' while on branch master
+    master
+  Tracked remote branches
+    master
+    ticgit
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Removendo e Renomeando Remotos</h2>
+                    <pre><code data-trim data-noescape>
+$ git remote rename pb paul
+$ git remote
+origin
+paul
+                    </code></pre>
+
+                    <pre><code data-trim data-noescape>
+$ git remote rm paul
+$ git remote
+origin
+                    </code></pre>
+                </section>
+
+                <section data-background="images/demo1.jpg">
+                </section>
+
+                <section data-background="#9B0000">
+                    <h1 class="subtitle">Tomo 6</h1>
+                    <h2 class="subtitle">Tagging</h2>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Listando Suas Tags</h2>
+
+                    <pre><code data-trim data-noescape>
+$ git tag
+v0.1
+v1.3
+                    </code></pre>
+
+                    <pre><code data-trim data-noescape>
+$ git tag -l 'v1.4.2.*'
+v1.4.2.1
+v1.4.2.2
+v1.4.2.3
+v1.4.2.4
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1 class="color5-darker">Criando tags</h1>
+                    <h2 class="color1-darker">Tags leves</h2>
+                    <p>
+                        é um ponteiro para um commit específico
+                    </p>
+                    <h2 class="color1-darker">Tags anotadas</h2>
+                    <p>
+                        são armazenadas como objetos inteiros no banco de dados do Git
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Criando tag anotada</h2>
+                    <pre><code data-trim data-noescape>
+$ git tag -a v1.4 -m 'my version 1.4'
+$ git tag
+v0.1
+v1.3
+v1.4
+                    </code></pre>
+
+                    <p>
+                        <i>Você pode ver os dados da tag junto com o commit que foi taggeado usando o comando <code>git show.</code></i>
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Criando tag leve</h2>
+
+                    <pre><code data-trim data-noescape>
+$ git tag v1.4-lw
+$ git tag
+v0.1
+v1.3
+v1.4
+v1.4-lw
+v1.5
+                    </code></pre>
+
+                    <p>
+                        <i>se você executar <code>git show</code> na tag, você não verá nenhuma informação extra.</i>
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Verificando Tags</h2>
+
+                    <pre><code data-trim data-noescape>
+$ git tag -v v1.4.2.1
+object 883653babd8ee7ea23e6a5c392bb739348b1eb61
+type commit
+tag v1.4.2.1
+tagger Junio C Hamano &lt;junkio@cox.net&gt; 1158138501 -0700
+
+GIT 1.4.2.1
+
+Minor fixes since 1.4.2, including git-mv and git-http with alternates.
+gpg: Signature made Wed Sep 13 02:08:25 2006 PDT using DSA key ID F3119B9A
+gpg: Good signature from &quot;Junio C Hamano &lt;junkio@cox.net&gt;&quot;
+gpg:                 aka &quot;[jpeg image of size 1513]&quot;
+Primary key fingerprint: 3565 2A26 2040 E066 C9A7  4A7D C0C6 D9A4 F311 9B9A
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Taggeando mais tarde</h2>
+                    <pre><code data-trim data-noescape>
+$ git log --pretty=oneline
+15027957951b64cf874c3557a0f3547bd83b3ff6 Merge branch 'experiment'
+a6b4c97498bd301d84096da251c98a07c7723e65 beginning write support
+0d52aaab4479697da7686c15f77a3d64d9165190 one more thing
+6d52a271eda8725415634dd79daabbc4d9b6008e Merge branch 'experiment'
+0b7434d86859cc7b8c3d5e1dddfed66ff742fcbc added a commit function
+4682c3261057305bdd616e23b64b0857d832627b added a todo file
+166ae0c4d3f420721acbb115cc33848dfcc2121a started write support
+9fceb02d0ae598e95dc970b74767f19372d61af8 updated rakefile
+964f16d36dfccde844893cac5b347e7b3d44abbc commit the todo
+8a5cbc430f1a9c3d00faaeffd07798508422908a updated readme
+                    </code></pre>
+
+                    <pre><code data-trim data-noescape>
+$ git tag -a v1.2 9fceb02
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Compartilhando tags</h2>
+                    <pre><code data-trim data-noescape>
+$ git push origin --tags
+Counting objects: 50, done.
+Compressing objects: 100% (38/38), done.
+Writing objects: 100% (44/44), 4.56 KiB, done.
+Total 44 (delta 18), reused 8 (delta 1)
+To git@github.com:schacon/simplegit.git
+ * [new tag]         v0.1 -&gt; v0.1
+ * [new tag]         v1.2 -&gt; v1.2
+ * [new tag]         v1.4 -&gt; v1.4
+ * [new tag]         v1.4-lw -&gt; v1.4-lw
+ * [new tag]         v1.5 -&gt; v1.5
+                    </code></pre>
+                </section>
+
+                <section data-background="images/demo1.jpg">
+                </section>
+
+                <section data-background="#9B0000">
+                    <h1 class="subtitle">Tomo 7</h1>
+                    <h2 class="subtitle">Ramificações</h2>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Git e branching</h2>
+                    <img src="images/ninja.jpg" class="clean-img img-responsive"/>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Entendendo o branch</h2>
+                    <h3>Um commit, árvore e binários</h3>
+                    <img src="images/branch1.png" alt="" class="clean-img img-responsive">
+                </section>
+                <section>
+                    <h2 class="color5-darker">Entendendo o branch</h2>
+                    <h3>Um commit referencia o anterior</h3>
+                    <img src="images/branch2.png" alt="" class="clean-img img-responsive">
+                </section>
+                <section>
+                    <h2 class="color5-darker">Entendendo o branch</h2>
+                    <h3>Master é um branch padrão, que aponta para um commit</h3>
+                    <img src="images/branch3.png" alt="" class="clean-img img-responsive">
+                </section>
+                <section>
+                    <h2 class="color5-darker">Entendendo o branch</h2>
+                    <h3>Testing é outro branch</h3>
+                    <img src="images/branch4.png" alt="" class="clean-img img-responsive">
+                </section>
+                <section>
+                    <h2 class="color5-darker">Entendendo o branch</h2>
+                    <h3>HEAD é um ponteiro especial que aponta pra branch atual</h3>
+                    <img src="images/branch5.png" alt="" class="clean-img img-responsive">
+                </section>
+                <section>
+                    <h2 class="color5-darker">Entendendo o branch</h2>
+                    <h3>O checkout muda o HEAD pra outra branch</h3>
+                    <img src="images/branch6.png" alt="" class="clean-img img-responsive">
+                </section>
+                <section>
+                    <h2 class="color5-darker">Entendendo o branch</h2>
+                    <h3>Um commit faz essa branch avançar</h3>
+                    <img src="images/branch7.png" alt="" class="clean-img img-responsive">
+                </section>
+                <section>
+                    <h2 class="color5-darker">Entendendo o branch</h2>
+                    <h3>Voltando pra branch master</h3>
+                    <img src="images/branch8.png" alt="" class="clean-img img-responsive">
+                </section>
+                <section>
+                    <h2 class="color5-darker">Entendendo o branch</h2>
+                    <h3>Branch mastar avança em seu próprio ramo</h3>
+                    <img src="images/branch9.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section data-background="images/demo1.jpg">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Resolução de conflitos</h2>
+                    <h3>Use uma ferramenta de meeeeerge!</h3>
+                    <img src="images/cabra1.jpg" class="clean-img img-responsive"/>
+                </section>
+
+                <section data-background="images/demo1.jpg">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Fluxo de trabalho com branch</h2>
+                    <h3>Mantenha branchs de longa  duração</h3>
+                    <img src="images/branch10.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Fluxo de trabalho com branch</h2>
+                    <h3>Use níveis de estabilidade</h3>
+                    <img src="images/branch11.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Fluxo de trabalho com branch</h2>
+                    <h3>Use branchs tópicos a gosto!</h3>
+                    <img src="images/branch12.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Fluxo de trabalho com branch</h2>
+                    <h3>Integre branchs a gosto!</h3>
+                    <img src="images/branch13.png" alt="" class="clean-img img-responsive">
+                    <h1 class="color5-darker">#CHUPASVN #CHUPACVS</h1>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Branchs remotos</h2>
+                    <h3>Ao fazer um fetch, você baixa os branchs remotos e cria seus branchs locais!</h3>
+                    <img src="images/branch14.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Branchs remotos</h2>
+                    <h3>Seu branch master se move, mas o origin/master não!</h3>
+                    <img src="images/branch15.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Branchs remotos</h2>
+                    <h3>Um novo <code>git fetch origin</code> sincroniza os masters</h3>
+                    <img src="images/branch16.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Branchs remotos</h2>
+                    <h3>Que tal adicionar um novo remote?</h3>
+                    <img src="images/branch17.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Branchs remotos</h2>
+                    <h3>Obtendo código do outro remote</h3>
+                    <img src="images/branch18.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Branchs remotos</h2>
+                    <h3>O fetch não permite que você trabalhe com o branch remoto</h3>
+                    <p>
+                        Você recebe apenas uma referência. É necessário fazer um <code>merge</code> ou <code>checkout</code>.
+                    </p>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Branchs remotos</h2>
+                    <h3>Para enviar seu código, você deve fazer um push</h3>
+                    <img src="images/push-vs-pull-infographic-.jpg" class="clean-img img-responsive"/>
+                </section>
 
 
                 <section>

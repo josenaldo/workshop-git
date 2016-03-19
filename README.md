@@ -7,6 +7,8 @@ Aqui você encontrará os tomos do segredo nínjico do git:
 -	Tomo 3: Instalando o git
 -	Tomo 4: Git essencial
 -	Tomo 5: Trabalhando com repositórios remotos
+-	Tomo 6: Tagging
+-	Tomo 7: Ramificações
 
 Git
 
@@ -15,13 +17,7 @@ Onde hospedar
     github
     bitbucket
     assembla
-Coomandos básicos
-    git init
-    git add
-    git clone
-    git commit
-Estados de um arquivo
-.gitignore
+
 Mais comandos
     git reset
     git rm
