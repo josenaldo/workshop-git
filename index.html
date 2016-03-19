@@ -916,7 +916,7 @@ To git@github.com:schacon/simplegit.git
 
                 <section data-background="#9B0000">
                     <h1 class="subtitle">Tomo 7</h1>
-                    <h2 class="subtitle">Ramificações</h2>
+                    <h2 class="subtitle">Branching</h2>
                 </section>
 
                 <section>
@@ -1051,6 +1051,64 @@ To git@github.com:schacon/simplegit.git
                     <img src="images/push-vs-pull-infographic-.jpg" class="clean-img img-responsive"/>
                 </section>
 
+                <section data-background="images/demo1.jpg">
+                </section>
+
+                <section data-background="#9B0000">
+                    <h1 class="subtitle">Tomo 8</h1>
+                    <h2 class="subtitle">Merge e rebase</h2>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Merge e rebase</h2>
+                    <h3>Commit em dois branchs diferentes</h3>
+                    <img src="images/branch19.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Merge e rebase</h2>
+                    <h3>Merge é a forma mais fácil de integrar os ramos</h3>
+                    <img src="images/branch20.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Merge e rebase</h2>
+                    <h3>Se executar um rebase...</h3>
+                    <pre><code data-trim data-noescape>
+$ git checkout experiment
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Applying: added staged command
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Merge e rebase</h2>
+                    <h3>Fazendo o rebase em C4 de mudanças feitas em C3</h3>
+                    <img src="images/branch21.png" class="clean-img img-responsive"/>
+                    <aside class="notes">
+                        Ele vai ao ancestral comum dos dois branches (no que você está e no qual será feito o rebase), pega a diferença (diff) de cada commit do branch que você está, salva elas em um arquivo temporário, restaura o brach atual para o mesmo commit do branch que está sendo feito o rebase e, finalmente, aplica uma mudança de cada vez. A Figura 3-29 ilustra esse processo.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Merge e rebase</h2>
+                    <h3>Fazendo um fast-forward no branch master.</h3>
+                    <img src="images/branch22.png" alt="" class="clean-img img-responsive">
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Merge mais fácil</h2>
+                    <h2 class="color5-darker">Rebase mais limpo</h2>
+                </section>
+
+                <section data-background="images/demo1.jpg">
+                </section>
+
+                <section data-background="#9B0000">
+                    <h1 class="subtitle">Tomo 9</h1>
+                    <h2 class="subtitle">Github</h2>
+                </section>
 
                 <section>
                     <h1 class="color5-darker">Perguntas?</h1>
