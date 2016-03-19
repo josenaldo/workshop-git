@@ -277,14 +277,6 @@ $ man git-&lt;verb&gt;
                 </section>
 
                 <section>
-                    <h2 class="color1-darker">selecionar e consolidar (fazer commit) alterações</h2>
-                    <h2 class="color1-darker"> desfazer enganos</h2>
-                    <h2 class="color1-darker">pesquisar o histórico do seu projeto</h2>
-                    <h2 class="color1-darker">visualizar alterações entre commits</h2>
-                    <h2 class="color1-darker"> enviar e obter arquivos a partir de repositórios remotos</h2>
-                </section>
-
-                <section>
                     <h2 class="color5-darker">Inicializando um Repositório em um Diretório Existente</h2>
                     <pre><code data-trim data-noescape>
 $ git init
@@ -395,9 +387,9 @@ Untracked files:
                 <section>
                     <h1 class="color5-darker">Atenção!!!</h1>
                     <h2>
-                        Quando o git add é executado, o git seleciona o arquivo do jeito que ele está.
+                        Quando o <code>git add</code> é executado, o git seleciona o arquivo do jeito que ele está.
                     </h2>
-                    <h2>Se esse arquivo for alterado após o git add, é necessário executar o git add novamente.</h2>
+                    <h2>Se esse arquivo for alterado após o <code>git add</code>, é necessário executar o <code>git add</code> novamente.</h2>
                 </section>
 
                 <section>
@@ -419,12 +411,41 @@ Untracked files:
                 </section>
 
                 <section>
+                    <h2 class="color5-darker">Verificcando as mudanças</h2>
+                    <pre><code data-trim data-noescape>
+$ git diff
+diff --git a/index.html b/index.html
+index 2c78d33..544c542 100644
+--- a/index.html
++++ b/index.html
+@@ -16,11 +16,11 @@
+     &lt;/head&gt;
+     &lt;body&gt;
+
+-        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
++        &lt;h1&gt;Olha o titulo adicionado!</h1>
++        &lt;h2&gt;Outro s&oacute; pra variar&lt;/h2&gt;
++
+         &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js&quot;&gt;&lt;/script&gt;
+-        &lt;!-- Include all compiled plugins (below), or include individual files as needed --&gt;
+         &lt;script src=&quot;https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js&quot;&gt;&lt;/script&gt;
+-
+-         &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs//angular.js&quot;&gt;&lt;/script&gt;
++        &lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/angularjs//angular.js&quot;&gt;&lt;/script&gt;
+     &lt;/body&gt;
+ &lt;/html&gt;
+warning: LF will be replaced by CRLF in index.html.
+The file will have its original line endings in your working directory.
+                    </code></pre>
+                </section>
+                <section>
                     <h2 class="color5-darker">Comitando</h2>
                     <pre><code data-trim data-noescape>
-$ git commit -m "Primeiro commit"
-[master (root-commit) 5a7b9de] Primeiro commit
- 1 file changed, 0 insertions(+), 0 deletions(-)
- create mode 100644 README.md
+$ git commit -m "Comita com mensagem"
+                    </code></pre>
+
+                    <pre><code data-trim data-noescape>
+git commit -a -m 'Adiciona e comita com mensagem'
                     </code></pre>
                 </section>
 
@@ -433,9 +454,261 @@ $ git commit -m "Primeiro commit"
                     <img src="images/commit-windows.png" class="clean-img img-responsive"/>
                 </section>
 
+                <section>
+                    <h2 class="color5-darker">Outros comandos</h2>
+                    <h3 class="color2-darker">Remover arquivos</h3>
+                    <pre><code data-trim data-noescape>
+$ git rm arquivo
+
+$ git rm --cached readme.txt
+
+$ git rm log/\*.log
+                    </code></pre>
+                    <h3 class="color2-darker">Movendo arquivos</h3>
+                    <pre><code data-trim data-noescape>
+$ git mv arquivo_origem arquivo_destino
+                    </code></pre>
+                </section>
+
                 <section data-background="images/demo1.jpg">
                 </section>
 
+                <section>
+                    <h2 class="color5-darker">Visualizando o histórico de commits</h2>
+                    <pre><code data-trim data-noescape>
+$ git log
+commit ca82a6dff817ec66f44342007202690a93763949
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Mon Mar 17 21:52:11 2008 -0700
+
+    changed the verison number
+
+commit 085bb3bcb608e1e8451d4b2432f8ecbe6306e7e7
+Author: Scott Chacon &lt;schacon@gee-mail.com&gt;
+Date:   Sat Mar 15 16:40:33 2008 -0700
+
+    removed unnecessary test code
+...
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Parâmetros do <code>git log</code></h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Opção</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code>-p</code>
+                                </td>
+                                <td>Mostra o patch introduzido com cada commit.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>--stat</code>
+                                </td>
+                                <td>Mostra estatísticas de arquivos modificados em cada commit.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>--shortstat</code>
+                                </td>
+                                <td>Mostra somente as linhas modificadas/inseridas/excluídas do comando --stat.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>--name-only</code>
+                                </td>
+                                <td>Mostra a lista de arquivos modificados depois das informações do commit.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>--name-status</code>
+                                </td>
+                                <td>Mostra a lista de arquivos afetados com informações sobre adição/modificação/exclusão dos mesmos.</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Parâmetros do <code>git log</code></h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Opção</th>
+                                <th>Descrição</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <code>--abbrev-commit</code>
+                                </td>
+                                <td>Mostra somente os primeiros caracteres do checksum SHA-1 em vez de todos os 40.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>--relative-date</code>
+                                </td>
+                                <td>Mostra a data em um formato relativo (por exemplo, “2 semanas atrás”) em vez de usar o formato de data completo.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>--graph</code>
+                                </td>
+                                <td>Mostra um gráfico ASCII do branch e histórico de merges ao lado da saída de log.</td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <code>--pretty</code>
+                                </td>
+                                <td>Mostra os commits em um formato alternativo. Opções incluem oneline, short, full, fuller, e format (onde você especifica seu próprio formato).</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Histórico no Windows</h2>
+                    <img src="images/git-log-windows.png" class="clean-img img-responsive"/>
+                </section>
+
+                <section data-background="images/demo1.jpg">
+                </section>
+
+                <section>
+                    <h1 class="color5-darker">Desfazendo coisas no git</h1>
+                    <h2>Cuidado! Essa é uma das poucas áreas no Git onde você pode perder algum trabalho se fizer errado.</h2>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Modificando o último commit</h2>
+                    <pre><code data-trim data-noescape>
+$ git commit --amend
+                    </code></pre>
+
+                    <pre><code data-trim data-noescape>
+$ git commit -m 'initial commit'
+$ git add forgotten_file
+$ git commit --amend
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Tirando arquivos da área de seleção</h2>
+
+                    <p>
+                        Você adicionou arquivos (<code>git add</code>) e quer remover algum deles?
+                    </p>
+
+                    <pre><code data-trim data-noescape>
+$ git add .
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use "git reset HEAD &lt;file&gt;..." to unstage)
+#
+#       modified:   README.txt
+#       modified:   benchmarks.rb
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Git reset neles!</h2>
+                    <pre><code data-trim data-noescape>
+$ git reset HEAD benchmarks.rb
+benchmarks.rb: locally modified
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+#
+#       modified:   README.txt
+#
+# Changes not staged for commit:
+#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+#
+#       modified:   benchmarks.rb
+#
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Desfazendo um Arquivo Modificado</h2>
+                    <p>
+                        Alterou um arquivo e quer desfazer a alteração?
+                    </p>
+                    <pre><code data-trim data-noescape>
+# Changes not staged for commit:
+#   (use &quot;git add &lt;file&gt;...&quot; to update what will be committed)
+#   (use &quot;git checkout -- &lt;file&gt;...&quot; to discard changes in working directory)
+#
+#       modified:   benchmarks.rb
+#
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Use checkout!</h2>
+
+                    <pre><code data-trim data-noescape>
+$ git checkout -- benchmarks.rb
+$ git status
+# On branch master
+# Changes to be committed:
+#   (use &quot;git reset HEAD &lt;file&gt;...&quot; to unstage)
+#
+#       modified:   README.txt
+#
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">E no Windows?</h2>
+                    <img src="images/revert1.png" class="clean-img img-responsive"/>
+                </section>
+
+                <section data-background="images/demo1.jpg">
+                </section>
+
+                <section data-background="#9B0000">
+                    <h1 class="subtitle">Tomo 5</h1>
+                    <h2 class="subtitle">Trabalhando com repositórios remotos</h2>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Como é o trabalho com vários repositórios no git?</h2>
+                    <img src="images/Git-remote.png" class="clean-img img-responsive"/>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Vendo quais são seus remotos</h2>
+                    <pre><code data-trim data-noescape>
+$ git remote -v
+bakkdoor  git://github.com/bakkdoor/grit.git
+cho45     git://github.com/cho45/grit.git
+defunkt   git://github.com/defunkt/grit.git
+koke      git://github.com/koke/grit.git
+origin    git@github.com:mojombo/grit.git
+                    </code></pre>
+
+                    <h3>Oxe! Ma que porra é essa, Mah? Tem mais de um remoto aí!</h3>
+                    <h2 class="color5-darker">SIM! Com o git, podemos ter vários remotos!</h2>
+                </section>
+
+
+
+                                <section>
+                                    <h2 class="color1-darker"> enviar e obter arquivos a partir de repositórios remotos</h2>
+                                </section>
 
 
 
@@ -446,6 +719,8 @@ $ git commit -m "Primeiro commit"
                     <h2 class="color3-darker">Twitter: @josenaldomatos</h2>
                     <h2 class="color5-darker">Github: https://github.com/josenaldo</h2>
                 </section>
+
+
             </div>
         </div>
         <script src="lib/js/head.min.js"></script>
