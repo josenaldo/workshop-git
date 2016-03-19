@@ -44,7 +44,8 @@
                 <section>
                     <h1 class="color5-darker">Quem sou?</h1>
                     <h3 class="color1-darker">Josenaldo de Oliveira Matos Filho</h3>
-                    <h3 class="color2-darker">Jugleader no <a href="http://uaijug.com.br" target="_blank">UaiJUG</a>
+                    <h3 class="color2-darker">Jugleader no
+                        <a href="http://uaijug.com.br" target="_blank">UaiJUG</a>
                     </h3>
                     <h3 class="color3-darkker">Arquiteto de Software do
                         <a href="http://comdominiodigital.com.br">comdominiodigital.com.br</a>
@@ -70,9 +71,7 @@
 
                 <section>
                     <h1 class="color5-darker">Controle de versão</h1>
-                    <h3 class="color1-darker">Um sistema de controle de versão, VCS, na função prática da
-                        Ciência da Computação e da Engenharia de Software, é um software com a finalidade de gerenciar
-                        diferentes versões no desenvolvimento de um documento qualquer...</h3>
+                    <h3 class="color1-darker">Um sistema de controle de versão, VCS, na função prática da Ciência da Computação e da Engenharia de Software, é um software com a finalidade de gerenciar diferentes versões no desenvolvimento de um documento qualquer...</h3>
                     <blockquote cite="http://wikipedia.com.br">
                         Boring definition...
                     </blockquote>
@@ -128,6 +127,137 @@
                     <h2 class="color1-darker">Ex: commit, add, revert...</h2>
                 </section>
 
+                <section>
+                    <h1 class="color5-darker">Integridade ninja</h1>
+                    <h2 class="color1-darker">Tudo tem checksum</h2>
+                    <h2>SHA-1</h2>
+                </section>
+
+                <section>
+                    <h1 class="color5-darker">Os estados</h1>
+                    <img src="images/status.png" class="clean-img stretch"/>
+                </section>
+
+                <section data-background="#9B0000">
+                    <h1 class="subtitle">Tomo 3</h1>
+                    <h2 class="subtitle">Preparando o git</h2>
+                </section>
+
+                <section>
+                    <h1 class="color5-darker">Instalação</h1>
+                    <h2 class="color1-darker">
+                        <a href="https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git">https://git-scm.com/book/pt-br/v1/Primeiros-passos-Instalando-Git</a>
+                    </h2>
+                </section>
+
+                <section data-background="images/demo1.jpg"></section>
+
+                <section>
+                    <h2 class="color5-darker">Configuração inicial *nix</h2>
+                    <img src="images/config.jpg" class="clean-img stretch"/>
+
+                    <aside class="notes">
+                        Agora que você tem o Git em seu sistema, você pode querer fazer algumas coisas para customizar seu ambiente Git. Você só precisa fazer uma vez; as configurações serão mantidas entre atualizações. Você também poderá alterá-las a qualquer momento executando os comandos novamente. Git vem com uma ferramenta chamada git config que permite a você ler e definir variáveis de configuração que controlam todos os aspectos de como o Git parece e opera. Essas variáveis podem ser armazenadas em três lugares diferentes: arquivo /etc/gitconfig: Contém valores para todos usuários do sistema e todos os seus repositórios. Se você passar a opção --system para git config, ele lerá e escreverá a partir deste arquivo especificamente. arquivo ~/.gitconfig: É específico para seu usuário. Você pode fazer o Git ler e escrever a partir deste arquivo especificamente passando a opção --global. arquivo de configuração no diretório git (ou seja, .git/config) de qualquer repositório que você está utilizando no momento: Específico para aquele único repositório. Cada nível sobrepõem o valor do nível anterior, sendo assim valores em .git/config sobrepõem aqueles em /etc/gitconfig. Em sistemas Windows, Git procura pelo arquivo .gitconfig no diretório $HOME (C:\Documents and Settins\$USER para a maioria das pessoas). Também procura por /etc/gitconfig, apesar de que é relativo à raiz de MSys, que é o local onde você escolheu instalar o Git no seu sistema Windows quando executou o instalador.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Configuração inicial Windows</h2>
+                    <img src="images/config_windows.jpg" class="clean-img stretch"/>
+
+                    <aside class="notes">
+                        Agora que você tem o Git em seu sistema, você pode querer fazer algumas coisas para customizar seu ambiente Git. Você só precisa fazer uma vez; as configurações serão mantidas entre atualizações. Você também poderá alterá-las a qualquer momento executando os comandos novamente. Git vem com uma ferramenta chamada git config que permite a você ler e definir variáveis de configuração que controlam todos os aspectos de como o Git parece e opera. Essas variáveis podem ser armazenadas em três lugares diferentes: arquivo /etc/gitconfig: Contém valores para todos usuários do sistema e todos os seus repositórios. Se você passar a opção --system para git config, ele lerá e escreverá a partir deste arquivo especificamente. arquivo ~/.gitconfig: É específico para seu usuário. Você pode fazer o Git ler e escrever a partir deste arquivo especificamente passando a opção --global. arquivo de configuração no diretório git (ou seja, .git/config) de qualquer repositório que você está utilizando no momento: Específico para aquele único repositório. Cada nível sobrepõem o valor do nível anterior, sendo assim valores em .git/config sobrepõem aqueles em /etc/gitconfig. Em sistemas Windows, Git procura pelo arquivo .gitconfig no diretório $HOME (C:\Documents and Settins\$USER para a maioria das pessoas). Também procura por /etc/gitconfig, apesar de que é relativo à raiz de MSys, que é o local onde você escolheu instalar o Git no seu sistema Windows quando executou o instalador.
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 class="color1-darker">Identidade</h2>
+                    <pre><code data-trim data-noescape>
+$ git config --global user.name "John Doe"
+$ git config --global user.email johndoe@example.com
+                    </code></pre>
+
+                    <aside class="notes">
+                        Relembrando, você só precisará fazer isso uma vez caso passe a opção --global, pois o Git sempre usará essa informação para qualquer coisa que você faça nesse sistema. Caso você queira sobrepor estas com um nome ou endereço de e-mail diferentes para projetos específicos, você pode executar o comando sem a opção --global quando estiver no próprio projeto.
+                    </aside>
+                </section>
+
+                <section>
+                    <h1 class="color5-darker">Editor</h1>
+
+                    <pre><code data-trim data-noescape>
+                        $ git config --global core.editor emacs
+                    </code></pre>
+                    <pre><code data-trim data-noescape>
+                        $ git config --global core.editor "atom --wait"
+                    </code></pre>
+
+                    <pre><code data-trim data-noescape>
+                        $ git config --global core.editor "subl -n -w"
+                    </code></pre>
+
+                    <pre><code data-trim data-noescape>
+                    $ git config --global core.editor "mate -w"
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1 class="color5-darker">Ferramenta de diff</h1>
+                    <pre><code data-trim data-noescape>
+$ git config --global merge.tool vimdiff
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Ferramenta de diff - Windows</h2>
+                    <img src="images/TortoiseGitDiffViewer.png" class="clean-img stretch"/>
+
+                    <aside class="notes">
+                        <p>Under Configure the program used for comparing different revisions of files, select External and type the following into the box.</p>
+
+                        <pre><code data-trim data-noescape>
+                        WinMergeU /r /e /x /u /wl %base %mine
+                        </code></pre>
+
+                        <p>Next, select Merge Tool (on the left). Again, select External and type the following.</p>
+
+                        <pre><code data-trim data-noescape>
+                        WinMergeU /e /u %merged
+                        </code></pre>
+
+                        <p>Now, wherever TortoiseMerge use to show up, you should see WinMerge instead</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Verificando as configurações</h2>
+                    <pre><code data-trim data-noescape>
+$ git config --list
+user.name=Scott Chacon
+user.email=schacon@gmail.com
+color.status=auto
+color.branch=auto
+color.interactive=auto
+color.diff=auto
+...
+                    </code></pre>
+
+                    <h2>Verificando uma configuração específica</h2>
+
+                    <pre><code data-trim data-noescape>
+$ git config user.name
+Scott Chacon
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Obtendo ajuda</h2>
+                    <pre><code data-trim data-noescape>
+$ git help &lt;verb&gt;
+$ git &lt;verb&gt; --help
+$ man git-&lt;verb&gt;
+                </code></pre>
+                </section>
 
 
                 <section>
