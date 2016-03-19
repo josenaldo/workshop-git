@@ -161,3 +161,21 @@
 .reveal .color5-light { color: #FF3939 }
 .reveal .color5-dark { color: #C60000 }
 .reveal .color5-darker { color: #9B0000 }
+
+.reveal pre {
+    display: block;
+    position: relative;
+    width: 94%;
+    margin: 20px auto;
+    text-align: left;
+    font-size: 0.55em;
+    font-family: monospace;
+    line-height: 1.2em;
+    word-wrap: break-word;
+    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.3);
+}
+
+.reveal pre code {
+
+    max-height: 80%;
+}

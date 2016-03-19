@@ -55,7 +55,7 @@
 
                 <section>
                     <h1 class="color5-darker">Quem somos?</h1>
-                    <img src="images/uaijug-300.png" class="clean-img stretch">
+                    <img src="images/uaijug-300.png" class="clean-img img-responsive">
                     <h3 class="color4-darker">Grupo de usuários Java do Triângulo Mineiro</h3>
                 </section>
 
@@ -66,7 +66,7 @@
 
                 <section>
                     <h1 class="color5-darker">O dia em que rasguei o CD!</h1>
-                    <img src="images/cd_rasgado.jpg" class="clean-img stretch"/>
+                    <img src="images/cd_rasgado.jpg" class="clean-img img-responsive"/>
                 </section>
 
                 <section>
@@ -87,22 +87,34 @@
 
                 <section>
                     <h1 class="color5-darker">Zipomatic Versioning</h1>
-                    <img src="images/gambiarra.jpg" class="clean-img stretch"/>
+                    <img src="images/gambiarra.jpg" class="clean-img img-responsive"/>
                 </section>
 
                 <section>
                     <h1 class="color5-darker">Controle de versão local</h1>
-                    <img src="images/sistema-local.png" class="clean-img stretch"/>
+                    <img src="images/sistema-local.png" class="clean-img img-responsive"/>
                 </section>
 
                 <section>
                     <h1 class="color5-darker">Controle de versão centralizado</h1>
-                    <img src="images/sistema-centralizado.png" class="clean-img stretch"/>
+                    <img src="images/sistema-centralizado.png" class="clean-img img-responsive"/>
+
+                    <aside class="notes">
+                        <p>Pouca autonomia</p>
+                        <p>Trabalho privado limitado</p>
+                        <p>Risco de perda de dados</p>
+                    </aside>
                 </section>
 
                 <section>
                     <h1 class="color5-darker">Controle de versão distribuído</h1>
-                    <img src="images/sistema-distribuido.png" class="clean-img stretch"/>
+                    <img src="images/sistema-distribuido.png" class="clean-img img-responsive"/>
+                    <aside class="notes">
+                        <p>Autonomia</p>
+                        <p>RApidez</p>
+                        <p>Trabalho privado</p>
+                        <p>Confiabilidade</p>
+                    </aside>
                 </section>
 
                 <section data-background="#9B0000">
@@ -112,12 +124,12 @@
 
                 <section>
                     <h1 class="color5-darker">Snapshots x diferenças</h1>
-                    <img src="images/diferencas.png" class="clean-img stretch"/>
+                    <img src="images/diferencas.png" class="clean-img img-responsive"/>
                 </section>
 
                 <section>
                     <h1 class="color5-darker">Snapshots x diferenças</h1>
-                    <img src="images/snapshot.png" class="clean-img stretch"/>
+                    <img src="images/snapshot.png" class="clean-img img-responsive"/>
                 </section>
 
                 <section>
@@ -135,7 +147,7 @@
 
                 <section>
                     <h1 class="color5-darker">Os estados</h1>
-                    <img src="images/status.png" class="clean-img stretch"/>
+                    <img src="images/3estados.png" class="clean-img img-responsive"/>
                 </section>
 
                 <section data-background="#9B0000">
@@ -154,7 +166,7 @@
 
                 <section>
                     <h2 class="color5-darker">Configuração inicial *nix</h2>
-                    <img src="images/config.jpg" class="clean-img stretch"/>
+                    <img src="images/config.jpg" class="clean-img img-responsive"/>
 
                     <aside class="notes">
                         Agora que você tem o Git em seu sistema, você pode querer fazer algumas coisas para customizar seu ambiente Git. Você só precisa fazer uma vez; as configurações serão mantidas entre atualizações. Você também poderá alterá-las a qualquer momento executando os comandos novamente. Git vem com uma ferramenta chamada git config que permite a você ler e definir variáveis de configuração que controlam todos os aspectos de como o Git parece e opera. Essas variáveis podem ser armazenadas em três lugares diferentes: arquivo /etc/gitconfig: Contém valores para todos usuários do sistema e todos os seus repositórios. Se você passar a opção --system para git config, ele lerá e escreverá a partir deste arquivo especificamente. arquivo ~/.gitconfig: É específico para seu usuário. Você pode fazer o Git ler e escrever a partir deste arquivo especificamente passando a opção --global. arquivo de configuração no diretório git (ou seja, .git/config) de qualquer repositório que você está utilizando no momento: Específico para aquele único repositório. Cada nível sobrepõem o valor do nível anterior, sendo assim valores em .git/config sobrepõem aqueles em /etc/gitconfig. Em sistemas Windows, Git procura pelo arquivo .gitconfig no diretório $HOME (C:\Documents and Settins\$USER para a maioria das pessoas). Também procura por /etc/gitconfig, apesar de que é relativo à raiz de MSys, que é o local onde você escolheu instalar o Git no seu sistema Windows quando executou o instalador.
@@ -163,7 +175,7 @@
 
                 <section>
                     <h2 class="color5-darker">Configuração inicial Windows</h2>
-                    <img src="images/config_windows.jpg" class="clean-img stretch"/>
+                    <img src="images/config_windows.jpg" class="clean-img img-responsive"/>
 
                     <aside class="notes">
                         Agora que você tem o Git em seu sistema, você pode querer fazer algumas coisas para customizar seu ambiente Git. Você só precisa fazer uma vez; as configurações serão mantidas entre atualizações. Você também poderá alterá-las a qualquer momento executando os comandos novamente. Git vem com uma ferramenta chamada git config que permite a você ler e definir variáveis de configuração que controlam todos os aspectos de como o Git parece e opera. Essas variáveis podem ser armazenadas em três lugares diferentes: arquivo /etc/gitconfig: Contém valores para todos usuários do sistema e todos os seus repositórios. Se você passar a opção --system para git config, ele lerá e escreverá a partir deste arquivo especificamente. arquivo ~/.gitconfig: É específico para seu usuário. Você pode fazer o Git ler e escrever a partir deste arquivo especificamente passando a opção --global. arquivo de configuração no diretório git (ou seja, .git/config) de qualquer repositório que você está utilizando no momento: Específico para aquele único repositório. Cada nível sobrepõem o valor do nível anterior, sendo assim valores em .git/config sobrepõem aqueles em /etc/gitconfig. Em sistemas Windows, Git procura pelo arquivo .gitconfig no diretório $HOME (C:\Documents and Settins\$USER para a maioria das pessoas). Também procura por /etc/gitconfig, apesar de que é relativo à raiz de MSys, que é o local onde você escolheu instalar o Git no seu sistema Windows quando executou o instalador.
@@ -210,7 +222,7 @@ $ git config --global merge.tool vimdiff
 
                 <section>
                     <h2 class="color5-darker">Ferramenta de diff - Windows</h2>
-                    <img src="images/TortoiseGitDiffViewer.png" class="clean-img stretch"/>
+                    <img src="images/TortoiseGitDiffViewer.png" class="clean-img img-responsive"/>
 
                     <aside class="notes">
                         <p>Under Configure the program used for comparing different revisions of files, select External and type the following into the box.</p>
@@ -259,6 +271,174 @@ $ man git-&lt;verb&gt;
                 </code></pre>
                 </section>
 
+                <section data-background="#9B0000">
+                    <h1 class="subtitle">Tomo 4</h1>
+                    <h2 class="subtitle">Git essencial</h2>
+                </section>
+
+                <section>
+                    <h2 class="color1-darker">selecionar e consolidar (fazer commit) alterações</h2>
+                    <h2 class="color1-darker"> desfazer enganos</h2>
+                    <h2 class="color1-darker">pesquisar o histórico do seu projeto</h2>
+                    <h2 class="color1-darker">visualizar alterações entre commits</h2>
+                    <h2 class="color1-darker"> enviar e obter arquivos a partir de repositórios remotos</h2>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Inicializando um Repositório em um Diretório Existente</h2>
+                    <pre><code data-trim data-noescape>
+$ git init
+                    </code></pre>
+
+                    <p class="color2-darker">Qual é a diferença entre “git init” e “git init --bare”?</p>
+                    <img src="images/bare.png" class="clean-img img-responsive"/>
+
+                    <aside class="notes">
+                        <p>Isso cria um novo subdiretório chamado .git que contem todos os arquivos necessários de seu repositório — um esqueleto de repositório Git. Neste ponto, nada em seu projeto é monitorado.</p>
+                        <p>Com o comando git init --bare você está criando um repositório que é pushable. Geralmente os repositórios bare são criados no servidor e são considerados repositórios para armazenamento, em contraste aos repositórios que vão nas máquinas dos desenvolvedores que seriam os repositórios de desenvolvimento, criados com o comando git init (sem o --bare).</p>
+                        <p>Apesar do GIT ser um sistema de controle de versionamento distribuído, é muito comum que exista um repositório central que facilite a troca de informações entre os desenvolvedores, evitando a necessidade que os computadores dos desenvolvedores se comuniquem diretamente entre si.</p>
+                        <p>Ao incializar um repositório como bare não será permitido editar arquivos (git add) e commitar mudanças (git commit), já que o mesmo não possui uma working tree. Você deve atualizar um repositório bare utilizando git push.</p>
+                        <p>Você inicializa um repositório como bare quando deseja que ele seja o respositório central.</p>
+                    </aside>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Clonando um repositório existente</h2>
+                    <pre><code data-trim data-noescape>
+$ git clone https://github.com/josenaldo/workshop-git.git
+                    </code></pre>
+
+                    <pre><code data-trim data-noescape>
+$ git clone git@github.com:josenaldo/workshop-git.git
+                    </code></pre>
+
+                    <h1 class="color5-darker">clone != checkout</h1>
+                </section>
+
+                <section>
+                    <h1 class="color5-darker">Ciclo de vida do arquivo</h1>
+                    <img src="images/lifecicle.png" class="clean-img img-responsive"/>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Verificando o status de seus arquivos</h2>
+
+                    <pre><code data-trim data-noescape>
+$ git status
+On branch master
+
+Initial commit
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+        README.md
+
+nothing added to commit but untracked files present (use "git add" to track)
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Monitorando novos arquivos</h2>
+                    <pre><code data-trim data-noescape>
+$ git add README.md
+
+$ git status
+On branch master
+
+Initial commit
+
+Changes to be committed:
+  (use "git rm --cached &lt;file&gt;..." to unstage)
+
+        new file:   README.md
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">E no Windows?</h2>
+                    <img src="images/add-windows.png" class="clean-img img-responsive"/>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Alterando arquivos adicionados</h2>
+                    <ul>
+                        <li>Criar e adicionar arquivo index.html</li>
+                        <li>Alterar arquivo index.html</li>
+                        <li>Criar arquivo app.js</li>
+                    </ul>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Alterando arquivos adicionados</h2>
+                    <pre><code data-trim data-noescape>
+$ git status
+On branch master
+Changes to be committed:
+  (use "git reset HEAD &lt;file&gt;..." to unstage)
+
+        new file:   index.html
+
+Changes not staged for commit:
+  (use "git add &lt;file&gt;..." to update what will be committed)
+  (use "git checkout -- &lt;file&gt;..." to discard changes in working directory)
+
+        modified:   index.html
+
+Untracked files:
+  (use "git add &lt;file&gt;..." to include in what will be committed)
+
+        app.js
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h1 class="color5-darker">Atenção!!!</h1>
+                    <h2>
+                        Quando o git add é executado, o git seleciona o arquivo do jeito que ele está.
+                    </h2>
+                    <h2>Se esse arquivo for alterado após o git add, é necessário executar o git add novamente.</h2>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Ignorando arquivos</h2>
+                    <p>
+                        Configurar um arquivo .gitignore antes de começar a trabalhar é uma boa ideia.
+                    </p>
+                    <h3>Regras</h3>
+                    <ul>
+                        <li>Linhas em branco ou iniciando com # são ignoradas.</li>
+                        <li>Padrões glob comuns funcionam. *</li>
+                        <li>Você pode terminar os padrões com uma barra (/) para especificar diretórios.</li>
+                        <li>Você pode negar um padrão ao iniciá-lo com um ponto de exclamação (!).</li>
+                    </ul>
+
+                    <blockquote cite="https://pt.wikipedia.org/wiki/Glob_(programa%C3%A7%C3%A3o)">
+                        <a href="https://pt.wikipedia.org/wiki/Glob_(programa%C3%A7%C3%A3o)" target="_blank">* Definição chata de glob patterns na wikipedia</a>
+                    </blockquote>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Comitando</h2>
+                    <pre><code data-trim data-noescape>
+$ git commit -m "Primeiro commit"
+[master (root-commit) 5a7b9de] Primeiro commit
+ 1 file changed, 0 insertions(+), 0 deletions(-)
+ create mode 100644 README.md
+                    </code></pre>
+                </section>
+
+                <section>
+                    <h2 class="color5-darker">Comitando no TortoiseGit</h2>
+                    <img src="images/commit-windows.png" class="clean-img img-responsive"/>
+                </section>
+
+                <section data-background="images/demo1.jpg">
+                </section>
+
+
+
+
 
                 <section>
                     <h1 class="color5-darker">Perguntas?</h1>
@@ -270,7 +450,7 @@ $ man git-&lt;verb&gt;
         </div>
         <script src="lib/js/head.min.js"></script>
         <script src="js/reveal.js"></script>
-        <script src="js/presentation.js"></script>
+        <script src="js/init.js"></script>
         <script src="js/ga.js"></script>
     </body>
 </html>
